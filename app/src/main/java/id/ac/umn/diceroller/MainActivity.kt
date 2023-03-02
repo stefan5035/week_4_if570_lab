@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         rollButton.setOnClickListener {
             val resultTextView: TextView = findViewById(R.id.textView)
             resultTextView.text = "6"
+            //test
         }
     }
 }
