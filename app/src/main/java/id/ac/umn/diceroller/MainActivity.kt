@@ -2,7 +2,7 @@ package id.ac.umn.diceroller
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 /**
  * This activity allows the user to roll a dice and view the result
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         //rollButton for rolling dice
         val rollButton: Button = findViewById(R.id.button)
         rollButton.setOnClickListener {
-            val resultTextView: TextView = findViewById(R.id.textView)
+            val diceImage: ImageView = findViewById(R.id.imageView)
             rollButton.setOnClickListener { rollDice() }
         }
     }
@@ -28,8 +28,9 @@ class MainActivity : AppCompatActivity() {
         val diceRoll = dice.roll()
 
         // Update the screen with the dice roll
-        val resultTextView: TextView = findViewById(R.id.textView)
-        resultTextView.text = diceRoll.toString()
+        val diceImage: ImageView = findViewById(R.id.imageView)
+        diceImage.setImageResource(R.drawable.dice_2)
+
     }
 }
 
